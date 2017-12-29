@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Xpme</string>
+    <string name="action_leave">Leave</string>
+    <string name="action_send">Send</string>
+    <string name="prompt_message">Message</string>
+
+    <string name="connect">Connected</string>
+    <string name="disconnect">Disconnected, Please check your internet connection</string>
+    <string name="error_connect">Failed to connect</string>
+
+    <!-- messages -->
+    <string name="message_welcome">Welcome to Socket.IO Chat –</string>
+    <plurals name="message_participants">
+        <item quantity="one">there\'s %d viewers</item>
+        <item quantity="other">there are %d viewers</item>
+    </plurals>
+    <string name="message_user_joined">%s joined</string>
+    <string name="message_user_left">%s left</string>
+    <string name="user_action_typing">is typing</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="studio_site">XPME</string>
+
+</resources>

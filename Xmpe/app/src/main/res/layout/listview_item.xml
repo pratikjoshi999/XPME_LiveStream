@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="250dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.muvi.www.xmpe.content.ContentListActivity">
+
+
+    <ImageView
+        android:id="@+id/contentImageView"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:focusable="false"
+        android:padding="1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/awesome" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/play"
+        android:layout_above="@+id/contentNameTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42dp" />
+
+
+    <TextView
+        android:id="@+id/contentNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:focusable="false"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/userDetailLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="14dp" />
+
+    <RelativeLayout
+        android:id="@+id/userDetailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true">
+
+
+            <TextView
+                android:id="@+id/byTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:focusable="false"
+                android:text="By"
+                android:padding="10dp"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/userStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:background="#FF0000"
+            android:focusable="false"
+            android:padding="10dp"
+            android:text="LIVE"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

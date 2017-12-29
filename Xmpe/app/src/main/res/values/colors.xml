@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ED4242</color>
+    <color name="colorPrimaryDark">#D42929</color>
+    <color name="colorAccent">#238D8D</color>
+    <color name="username0">#91580f</color>
+<color name="username1">#91580f</color>
+<color name="username2">#f8a700</color>
+<color name="username3">#f78b00</color>
+<color name="username4">#58dc00</color>
+<color name="username5">#287b00</color>
+<color name="username6">#a8f07a</color>
+<color name="username7">#4ae8c4</color>
+<color name="username8">#3b88eb</color>
+<color name="username9">#3824aa</color>
+<color name="username10">#a700ff</color>
+<color name="username11">#d300e7</color>
+
+    /////////////NavigationDrawer
+    <color name="leftMenuBackground">#fff</color>
+    <color name="textColor">#757575</color>
+    <color name="buttonTextColor">#fff</color>
+    <color name="nav_drawer_lineColor">#000</color>
+    <color name="nav_drawer_text_Color">#000000</color>
+    <color name="appBackgroundColor">#fff</color>
+    <color name="noInternetColor">#5c6873</color>
+    <color name="border_color">#264177</color>
+    <color name="transparent">@android:color/transparent</color>
+
+    ///////////buttomView
+    <color name="buttomtextColor">#FFFFFF</color>
+</resources>

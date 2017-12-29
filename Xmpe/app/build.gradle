@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.muvi.www.xmpe"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+        versionName "2.5"
+        ndk {
+            abiFilters "armeabi-v7a", "x86", "armeabi", "mips"
+            moduleName "app"
+
+        }
+        buildConfigField "String", "SERVICE_BASE_PATH", "\"https://www.muvi.com/rest/\""
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+android {
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(path: ':library')
+    compile('io.socket:socket.io-client:0.8.3') {
+        exclude group: 'org.json', module: 'json'
+    }
+    compile project(':muviplayersdk')
+
+    //    compile 'com.muvi:APISDK:v1.05'
+    testCompile 'junit:junit:4.12'
+    compile project(path: ':apisdk')
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.github.nkzawa:socket.io-client:0.6.0'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta3'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta3'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.squareup.okhttp3:okhttp:3.1.2'
+    compile 'com.google.code.gson:gson:2.6.1'
+    compile 'com.vanniktech:emoji:0.2.0'
+    compile 'com.devbrackets.android:exomedia:3.0.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.daimajia.slider:library:1.1.5@aar'
+    testCompile 'junit:junit:4.12'
+}
+task copyJniLibs(type: Copy) {
+    from 'libs/armeabi'
+    into 'src/main/jniLibs/armeabi'
+}
+tasks.withType(JavaCompile) {
+    compileTask -> compileTask.dependsOn(copyJniLibs)
+}
+clean.dependsOn 'cleanCopyJniLibs'
